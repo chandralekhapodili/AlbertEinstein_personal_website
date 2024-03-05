@@ -1,0 +1,473 @@
+:root{
+    --menubarcolor:#368080;
+    --homecolor:black;
+    --biographycolor:#F5F5F5;
+    --publicationscolor:#FFFFFF;
+    --hobbiescolor:#FFFFFF;
+    --gallerycolor:#FFFFFF;
+    --blogscolor:#F5F5F5;
+}
+body{
+    margin:0%;
+}
+.container{
+    display:grid;
+    height:100vh;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows:0.1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.1fr;
+    grid-template-areas: 
+    "header header header header header header header"
+    "home home home home home home home "
+    "biography biography biography biography biography biography biography"
+    "publications publications publications publications publications publications publications"
+    "hobbies hobbies hobbies  hobbies hobbies hobbies hobbies "
+    "blogs  blogs blogs blogs blogs blogs blogs"
+    "gallery  gallery gallery gallery gallery gallery gallery"
+    "footer  footer footer footer footer footer footer"
+    ;
+}
+header{
+    width:100%;
+    height:70px;
+    border:1px solid black;
+    background:var(--menubarcolor);
+    grid-area: header;
+    margin:0%;
+    text-align: right;
+}
+.navbar a.icon{
+    display:none;
+}
+.navbar img{
+    width:9.49%;
+    height:100%;
+    float:left;
+}
+.navbar a{
+    display:inline-block;
+    font-family: comic Sans MS;
+    font-size:156.25%;
+    color:#ffffff;
+    padding:15px;
+    text-decoration: none;
+}
+.navbar a:hover{
+    background-color: #ffffff;
+    color: black;
+    font-weight: bolder;
+}
+main{
+    width:100%;
+    grid-area: home;
+    background: var(--homecolor);
+    margin:0%;
+    display:flex;
+    
+}
+.abouteinstein{
+    width: 50%;
+    height: auto;
+    padding-left:10%;
+    padding-top:10%;
+    
+    .proffesion{ 
+        color: #ffffff;
+        font-family: georgia;
+        font-size: 125%;
+    }
+    .name{
+        color:#ffffff;
+        font-family: Helvetica;
+        font-size: 250%;
+    }
+    .quote{ 
+        color:#FFFFFF;
+        font-family: Helvetica;
+        font-size: 137.5%;
+    }
+}
+.einsteinpicture{
+    width:50%;
+}
+.einsteinpicture img{
+    width:500px;
+    height:500px;
+    margin-right: 0%;
+}
+#biography{
+    width:100%;
+    grid-area: biography;
+    background: var(--biographycolor);
+    margin:0%;
+}
+.biographyconnect{
+    display:flex;
+}
+#biography h2{
+    font-family: comic Sans MS;
+    font-size: 25px;
+    margin-left: 15px;
+}
+.info li{
+    line-height: 25px;
+    margin-bottom: 10px;
+    text-align:justify;
+    font-size: 18px;
+    color:#0D0D0D;
+    margin-right: 10px;
+}
+.info a{
+    color:#368080;
+    font-weight: bolder;
+}
+.info{
+    width:90%;
+    margin-left:25px;
+    border:2px solid #368080;
+}
+.biographyemoji img{
+    width:140px;
+    height:300px;
+    margin-right: 5px;
+    padding-top:250px;
+}
+#publications{
+    width:100%;
+    grid-area: publications;
+    background: var(--publicationscolor);
+    margin: 0%;
+}
+#publications h2{
+    font-family: comic Sans MS;
+    font-size: 25px;
+    margin-left:15px;
+}
+.imagescontainer{
+    width:90%;
+    margin-left:25px;
+    display: flex;
+    gap:18px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    
+   
+}
+
+.papers1 a{
+    color: black;
+    padding-left: 0px;
+}
+.papers2 a{
+    color: black;
+    padding-left:0px;
+}
+.papers1 img{
+    width:258px;
+    height:300px;
+    padding-left:0px;
+}
+.papers2 img{
+    width:258px;
+    height:300px;
+    padding-left:0px;
+}
+.emojicontainer{
+    display:flex;
+    
+}
+.emoji img{
+    width:140px;
+    height:300px;
+    margin-right: 5px;
+    padding-top: 350px;
+}
+.photoid{
+    display: block;
+    
+}
+
+#hobbies{
+    width:100%;
+    grid-area: hobbies;
+    margin:0%;
+    background: var(--hobbiescolor);
+}
+#hobbies h2{
+    font-family: comic Sans MS;
+    font-size: 25px;
+    margin-left: 15px;
+}
+.hobbyemoji img{
+    width:140px;
+    height: 200px;
+    padding-top: 250px;
+    margin-left: 25px;
+}
+.hobbyemojicontainer{
+    display:flex;
+}
+.hobbycontainer{
+    width:90%;
+    
+    margin-left:0px;
+    margin-right: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    
+}
+.hobbyimages img{
+    width: 250px;
+    height:220px;
+    padding:5px;
+    border:2px solid #368080;
+}
+.hobbyinfo li{
+    line-height: 25px;
+    padding-bottom: 10px;
+    text-align: justify;
+    font-size: 18px;
+    color:#0D0D0D;
+}
+#blogs{
+    width: 100%;
+    grid-area: blogs;
+    background:var(--blogscolor);
+    margin:0%
+    
+}
+#blogs h2{
+    font-family: comic Sans MS;
+    font-size: 25px;
+    margin-left: 15px;
+}
+.blogemoji img{
+    width:140px;
+    height:300px;
+    margin-left:25px;
+    padding-top: 230px;
+}
+.blogemojicontainer{
+    display:flex
+}
+.blogscontainer{
+    width:90%;
+    display:flex;
+    gap:20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    padding-left:200px;
+    
+}
+.blogimage img{
+    width:300px;
+    height:250px;
+    display: inline-block;
+    border:3px solid #368080
+}
+.bloginfo {
+    
+    padding-left: 50px;
+    padding-top: 70px;
+    blogheading{
+        font-size: 25px;
+    }
+    blogpara{
+        font-size: 25px;
+        text-align: justify;
+    }
+    a{
+        color: #368080;
+        font-weight: bolder;
+    }
+}
+
+#gallery{
+    
+    grid-area: gallery;
+    margin:0%;
+    background: var(--menubarcolor);
+    width:100%;
+    
+}
+#gallery h2{
+    font-family: comic Sans MS;
+    font-size: 25px;
+    margin-left: 15px;
+    
+}
+.gallerypictures img{
+    display: inline-block;
+    width:272px;
+    height:230px;
+    margin-left:25px;
+    border:5px solid white;
+}
+footer{
+    width:100%;
+    background:black;
+    border:3px solid #368080;
+    grid-area:footer;
+    height: 50px;
+}
+.footerclass p{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+/** Mobile Version **/
+@media only screen and (max-width:500px){
+    .container{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+        grid-template-areas:
+        "header"
+        "home"
+        "biography"
+        "publications"
+        "hobbies"
+        "blogs"
+        "gallery"
+        "footer"
+        ;
+    }
+    header{
+        height:auto;
+        grid-area: header;
+    }
+    .navbar a{
+        display:none;
+    }
+    .navbar a.icon{
+        float: right;
+        display: block;
+    }
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align:left;
+        font-size:20px;
+        
+    }
+    .navbar img{
+        width:100px;
+        height:auto;
+    }
+    main{
+        width:auto;
+        grid-area: home;
+        display:flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .abouteinstein{
+        width:auto;
+        height: auto;
+        padding-bottom:25px;
+        .proffesion{ 
+            color: #ffffff;
+            font-family: georgia;
+            font-size: 125%;
+            text-align:left;
+        }
+        .name{
+            color:#ffffff;
+            font-family: Helvetica;
+            font-size: 250%;
+            text-align:left;
+        }
+        .quote{ 
+            color:#FFFFFF;
+            font-family: Helvetica;
+            font-size: 137.5%;
+            text-align: left;
+        }
+    }
+    #biography{
+        width: auto;
+        grid-area: biography;
+    }
+    .biographyemoji{
+        padding-top:420px;
+    }
+    #publications{
+        width: auto;
+        grid-area: publications;
+    }
+    .imagescontainer{
+        justify-content: center;
+    }
+    .emoji{
+        padding-top:2000px;
+    }
+    #hobbies{
+        width: auto;
+        grid-area: hobbies;
+
+    }
+    .hobbyemoji{
+        padding-top:800px;
+        padding-left: 0px;
+    }
+    .hobbycontainer{
+        justify-content: center;
+    }
+    .hobbyinfo li{
+       justify-content:center;
+    }
+    #blogs{
+        width: justify;
+        grid-area: blogs;
+
+    }
+    .blogemoji{
+        padding-top: 600px;
+        justify-content: center;
+    }
+    #gallery{
+        width:auto;
+        grid-area: gallery;
+    }
+   .gallerypictures img{
+     margin-left: 40px;
+   }
+   #footer{
+    width:auto;
+    grid-area: footer;
+   }
+
+}
+
+/** big screen **/
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
+    .container{
+        display:grid;
+        height:100vh;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-rows:0.1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.1fr;
+        grid-template-areas: 
+        "header header header header header header header"
+        "home home home home home home home "
+        "biography biography biography biography biography biography biography"
+        "publications publications publications publications publications publications publications"
+        "hobbies hobbies hobbies  hobbies hobbies hobbies hobbies "
+        "blogs  blogs blogs blogs blogs blogs blogs"
+        "gallery  gallery gallery gallery gallery gallery gallery"
+        "footer  footer footer footer footer footer footer"
+        ;
+    }
+    
+}
